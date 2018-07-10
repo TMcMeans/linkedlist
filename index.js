@@ -74,9 +74,3 @@ function removeBookmark(event) {
   }
 };
 
-
-
-
-
-
-
