@@ -71,6 +71,7 @@ fieldset {
 .right-container {
   width: 50%;
   background: #cfd8dc;
+  overflow: auto;
 }
 
 table {
@@ -121,6 +122,10 @@ a {
   margin: 5px 0 5px 0;
 }
 
+.read {
+  color: red;
+}
+
 /* Flex styles */
 
 @media screen and (max-width: 600px) {
@@ -143,7 +148,5 @@ a {
     margin: 10px auto 20px auto;
   }
 }
-
-
 
 
