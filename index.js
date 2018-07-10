@@ -74,6 +74,3 @@ function removeBookmark(event) {
   }
 };
 
-// function checkInputs() {
-// console.log('hi');
-// };

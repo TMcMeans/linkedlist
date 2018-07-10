@@ -71,6 +71,7 @@ fieldset {
 .right-container {
   width: 50%;
   background: #cfd8dc;
+  overflow: auto;
 }
 
 table {
