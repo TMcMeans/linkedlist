@@ -55,7 +55,7 @@ fieldset {
   color: #ffffff;
   font-family: 'Open Sans', sans-serif;
   display: block;
-  margin: 45px auto 20px auto;
+  margin: 45px auto 10px auto;
   width: 91.5%;
   font-weight: bold;
   padding: 5px;
@@ -64,6 +64,22 @@ fieldset {
 
 #submitButton:hover {
   background: #ffd773;
+}
+
+#submitButton:disabled {
+  background: #ffc107;
+}
+
+.count-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: #ffffff;
+}
+
+p {
+  font-size: 1.3em;
+  margin-bottom: 40px;
 }
 
 /* Right Container styles */ 
@@ -134,17 +150,26 @@ a {
     flex-direction: column;
     height: 100%;
   }
+
   .left-container, .right-container {
     width: 100%;
   }
+
+  .right-container {
+    background: #cfd8dc;
+  }
+
   h1 {
     font-size: 2em;
     margin: 10px 0 0 0; 
   }
+
   #webTitle, #webURL {
     margin: 20px auto 20px auto;
   }
+
   #submitButton {
     margin: 10px auto 20px auto;
   }
+  
 }

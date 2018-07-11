@@ -13,9 +13,13 @@
         <fieldset>
           <input id="webTitle" type="text" name="text" placeholder="Website Title">
           <input id="webURL" type ="url" name="url" placeholder="Website URL" pattern="https://.*" required>
-          <button id="submitButton" type="submit" value ="Send Request">Enter</button>
+          <button id="submitButton" type="submit" value ="Send Request" disabled>Enter</button>
         </fieldset>
       </form>
+      <div class="count-container">
+        <p>Links: <span class="link-count"></span></p>
+        <p>Read: <span class="read-count"></span></p>
+      </div>
     </div>
     <div class="right-container">
     </div>
