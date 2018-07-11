@@ -12,6 +12,17 @@ var rightColumn = document.querySelector('.right-container');
 // ===================================================
 // EVENT LISTENERS
 // ===================================================
+// can get one or the other to work, but not both.  will slack you
+// all I tried.... this is where I chose to leave it. GRRRR going to bed.
+
+webTitleInput.addEventListener('keyup', function(event) {
+      submitButton.disabled = false;
+    });
+
+webURLInput.addEventListener('keyup', function(event) {
+      submitButton.disabled = false;
+    });
+
 submitButton.addEventListener('click', function(event) {
   event.preventDefault();
   if (webTitleInput.value === '' && webURLInput.value === '') {
@@ -23,14 +34,15 @@ submitButton.addEventListener('click', function(event) {
   } else if (webURLInput.value === '') {
     alert('you need a URL');
     return;
-  }
+  };
   addBookmark();
   clearInputs();
+  submitButton.disabled = true;
 });
 
 rightColumn.addEventListener('click', function(event) {
   removeBookmark(event);
-})
+});
 
 // // on input listen for key up and change boolean value (clal .disabled)
 // each input call check inputs function inside function use if else statement
@@ -61,16 +73,17 @@ function addBookmark() {
        </td>
      </tr>`;
   rightColumn.appendChild(bookmark);
-} 
+};
 
 function clearInputs() {
   webTitleInput.value = '';
   webURLInput.value = '';
-}
+};
 
 function removeBookmark(event) {
   if (event.target.classList.contains('delete-btn')) {
     event.target.parentElement.parentElement.parentElement.parentElement.remove();
   }
 };
+
 
