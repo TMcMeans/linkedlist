@@ -10,9 +10,9 @@ var bookmarkURL = document.querySelector('a');
 var rightColumn = document.querySelector('.right-container');
 var leftColumn = document.querySelector('.left-container');
 var linkCount = document.querySelector('.link-count');
+var unreadCount = document.querySelector('.unread-count');
 var readCount = document.querySelector('.read-count');
 var links = 0; 
-var read = 0;
 
 // ===================================================
 // EVENT LISTENERS
@@ -37,9 +37,6 @@ submitButton.addEventListener('click', function(event) {
 
 rightColumn.addEventListener('click', function(event) {
   removeBookmark(event);
-  if (event.target.classList.contains('read-btn')) { 
-    readCount.innerHTML = rightColumn.querySelectorAll('.read').length;
-  }
 });
 
 leftColumn.addEventListener('keyup', function(event) {
@@ -55,12 +52,12 @@ function addBookmark() {
   bookmark.innerHTML = `
      <tr>
       <td>
-         <h3>${webTitleInput.value}</h3>
-       </td>
+        <h3>${webTitleInput.value}</h3>
+      </td>
      </tr>
      <tr>
        <td class="tableURL">
-           <a href="#">${webURLInput.value}</a>
+        <a href="#">${webURLInput.value}</a>
        </td>
      </tr>
      <tr>
@@ -84,6 +81,7 @@ function removeBookmark(event) {
     links--;
     linkCount.innerHTML = links;
   } 
+    readCount.innerText = rightColumn.querySelectorAll('.read').length;
 };
 
 function disableInputs(event) {
@@ -98,8 +96,6 @@ function countLinks() {
     links++;
     linkCount.innerHTML = links; 
 };
-
-
 
 
 
